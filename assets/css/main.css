@@ -138,9 +138,26 @@ input, select, textarea {
 		}
 	}
 
+	@keyframes fade{
+		0%{
+			opacity: 0;
+		}
+
+		50%{
+			opacity:1;
+		}
+
+		100%{
+			opacity:0;
+		}
+
+
+	}
+
 	@-ms-viewport {
 		width: device-width;
 	}
+
 
 	html {
 		width: 100%;
@@ -915,6 +932,13 @@ input, select, textarea {
 		.image.filtered.tinted:after {
 			background-image: url("../../images/overlay.png"), linear-gradient(45deg, rgba(114, 97, 147, 0.25) 25%, rgba(227, 123, 124, 0.25) 50%, rgba(255, 228, 180, 0.25)), linear-gradient(0deg, rgba(0, 0, 0, 0.125), rgba(0, 0, 0, 0.125));
 			background-size: 128px 128px, auto, auto;
+		}
+
+		.image.filtered.tinted.animated:after{
+			animation-name: fade;
+			animation-duration: 5s;
+			animation-iteration-count: infinite;
+
 		}
 
 		.image[data-position] img {
