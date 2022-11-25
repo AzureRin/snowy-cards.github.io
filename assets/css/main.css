@@ -7,6 +7,10 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+
+
+
+
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -902,11 +906,18 @@ input, select, textarea {
 	.xmasimage{
 		display:block;
 		width:75%;
-		margin:2.5em 2.5em 2.5em 2.5em;
+		margin:auto;
 		border-style: double;
 		border-width: 5px;
 		border-color:rgb(117, 117, 117)
 
+	}
+	
+	.logo{
+			display: flex;
+			align-items:center;
+			justify-content:center;
+			
 	}
 
 	.image {
@@ -928,6 +939,7 @@ input, select, textarea {
 			opacity: 1;
 			z-index: 1;
 		}
+		
 
 		.image.filtered.tinted:after {
 			background-image: url("../../images/overlay.png"), linear-gradient(45deg, rgba(114, 97, 147, 0.25) 25%, rgba(227, 123, 124, 0.25) 50%, rgba(255, 228, 180, 0.25)), linear-gradient(0deg, rgba(0, 0, 0, 0.125), rgba(0, 0, 0, 0.125));
@@ -939,6 +951,9 @@ input, select, textarea {
 			animation-duration: 5s;
 			animation-iteration-count: infinite;
 
+		}
+		.image.filtered.tinted.darken:after{
+			filter:brightness(0%);
 		}
 
 		.image[data-position] img {
