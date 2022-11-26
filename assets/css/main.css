@@ -162,6 +162,20 @@ input, select, textarea {
 		width: device-width;
 	}
 
+	@keyframes sweep{
+		0%{
+			clip-path: inset(0vw 99vw 0vw 0vw)
+		}
+
+		50%{
+			clip-path: inset(0vw 0vw 0vw 0vw)
+		}
+
+		50%{
+			clip-path: inset(0vw 0vw 0vw 99vw)
+		}
+	}
+
 
 	html {
 		width: 100%;
@@ -925,6 +939,11 @@ input, select, textarea {
 		position: relative;
 		border: 0;
 	}
+		.image.sweep{
+			animation-name: fade;
+			animation-duration: 2s;
+			animation-iteration-count:infinite;
+		}
 
 		.image.filtered:after {
 			background-image: url("../../images/overlay.png"), linear-gradient(45deg, rgba(114, 97, 147, 0.25) 25%, rgba(227, 123, 124, 0.25) 50%, rgba(255, 228, 180, 0.25));
